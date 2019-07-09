@@ -415,6 +415,7 @@ ol.notes li.note{
 
 .captions {
     text-align:justify;
+    word-wrap:break-word;
 }
 
 .captions a {
