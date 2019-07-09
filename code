@@ -264,7 +264,7 @@ aside {
 }
 
 .postnotes {
-    width:calc({text:post width} + {text:permalink width} + 50px);
+    width:calc({text:post width} + {text:permalink width} + 70px);
     border-top:1px solid {color:border};
     padding-top:70px;
     margin:-70px auto 0 auto;
@@ -543,7 +543,7 @@ input:focus:-ms-input-placeholder { color: transparent;}
 .contain {
     display:flex;
     justify-content:space-between;
-    width:calc({text:post width} + {text:permalink width} + 50px);
+    width:calc({text:post width} + {text:permalink width} + 70px);
     margin:0px auto 70px auto;
     padding-bottom:70px;
     {block:IndexPage}
