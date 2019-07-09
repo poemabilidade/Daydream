@@ -1,0 +1,1635 @@
+ <!---
+ 
+tumblr theme by nemurou
+ 
+july 2019
+ 
+TERMS OF USE: https://nemurou.tumblr.com/tou
+ 
+--->
+
+<!DOCTYPE html>
+<head>
+<title>{Title}</title>
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+<link rel="shortcut icon" href="{Favicon}">
+{block:Description}<meta name="description" content="{MetaDescription}">{/block:Description}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,900|Open+Sans:400,400i,700,800" rel="stylesheet">
+<link href="//dl.dropbox.com/s/50g6fbds3rh4m0j/saturnicons.css" rel="stylesheet">
+
+
+<meta name="image:icon" content=""/> 
+
+<meta name="if:show tags" content="">
+<meta name="if:show via icon" content="">
+<meta name="if:show captions" content="">
+<meta name="if:side captions" content="">
+
+<meta name="color:background" content="#FFFFFF">
+<meta name="color:text" content="#474747">
+<meta name="color:link" content="#3f3f3f">
+<meta name="color:border" content="#c2c1ce">
+<meta name="color:sidebar" content="#EAE9f2">
+<meta name="color:blog title" content="#605E61">
+<meta name="color:tagline" content="#C4BFC5">
+<meta name="color:search bar" content="#C4BFC5">
+<meta name="color:search bar text" content="#474747">
+<meta name="color:description" content="#474747">
+<meta name="color:sidebar links" content="#c4bfc5">
+<meta name="color:sidebar links hover" content="#9F97A1">
+<meta name="color:permalink date" content="#605e61">
+<meta name="color:note count" content="#C5C0C6">
+<meta name="color:tag" content="#474747">
+<meta name="color:tag background" content="#EAE9F2">
+<meta name="color:tag hover shadow" content="#cbc9df">
+<meta name="color:user" content="#605e61">
+<meta name="color:audio player" content="#EAE9f2">
+<meta name="color:selection text" content="#333333">
+<meta name="color:selection background" content="#f9f9fb">
+<meta name="color:tooltip text" content="#474747">
+<meta name="color:tooltip background" content="#eae9f2">
+<meta name="color:pagination" content="#474747">
+<meta name="color:pagination background" content="#EAE9F2">
+<meta name="color:pagination hover shadow" content="#cbc9df">
+
+<meta name="text:post width" content="450px"/>
+<meta name="text:permalink width" content="250px"/>
+
+<meta name="text:blog title" content="Daydream"/> 
+<meta name="text:tagline" content="sample tagline"/> 
+
+<meta name="text:link 1" content=""/>
+<meta name="text:link 1 url" content=""/>
+<meta name="text:link 2" content=""/>
+<meta name="text:link 2 url" content=""/>
+<meta name="text:link 3" content=""/>
+<meta name="text:link 3 url" content=""/>
+<meta name="text:link 4" content=""/>
+<meta name="text:link 4 url" content=""/>
+<meta name="text:link 5" content=""/>
+<meta name="text:link 5 url" content=""/>
+<meta name="text:link 6" content=""/>
+<meta name="text:link 6 url" content=""/>
+
+<link href="https://static.tumblr.com/ukg9sji/Ig5pudc0t/photoset.css" rel="stylesheet" type="text/css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="https://static.tumblr.com/yxfeliq/hHwojmt8m/bctphotoset.min.js"></script>
+
+<script>
+$(document).ready(function(){
+   $('.photo-slideshow').pxuPhotoset({
+       lightbox: true,
+       rounded: false,
+       gutter: '2px',
+       borderRadius: '0px',
+       photoset: '.photo-slideshow',
+       photoWrap: '.photo-data',
+       photo: '.pxu-photo'
+   });
+});
+</script>
+
+<script>
+   $(document).ready(function() {
+      $('iframe.tumblr_audio_player').load( function() {
+         $('iframe.tumblr_audio_player').contents().find("head")
+            .append($("<style type='text/css'> .audio-player{background:{color:audio player} !important} </style>"));
+      });
+   });
+</script>
+
+<style type="text/css">
+
+/*tumblr controls by cyantists*/
+iframe.tmblr-iframe {
+    z-index: 99999999999999!important;
+    top: 0!important;
+    right: 0!important;
+    opacity: 0.4;
+    filter: invert(1) contrast(150%);
+    -webkit-filter: invert(1) contrast(150%);
+    -o-filter: invert(1) contrast(150%);
+    -moz-filter: invert(1) contrast(150%);
+    -ms-filter: invert(1) contrast(150%);
+    transform: scale(0.5);
+    transform-origin: 100% 0;
+    -webkit-transform: scale(.7);
+    -webkit-transform-origin: 100% 0;
+    -o-transform: scale(.7);
+    -o-transform-origin: 100% 0;
+    -moz-transform: scale(.7);
+    -moz-transform-origin: 100% 0;
+    -ms-transform: scale(.7);
+    -ms-transform-origin: 100% 0;
+}
+
+::selection {
+    background:{color:selection background};
+    color:{color:selection text};
+}
+           
+::-moz-selection {
+    background:{color:selection background};
+    color:{color:selection text};
+}
+
+#s-m-t-tooltip {
+    max-width:150px;
+    background:{color:tooltip background};
+    color:{color:tooltip text};
+    padding:1px 10px 2px 10px;
+    z-index:999;
+    margin:20px;
+    font-size:10px;
+}
+ 
+body {
+    margin:0;
+    font-size:12px;
+    font-family: 'Lato', sans-serif;
+    line-height:180%;
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-font-smoothing:antialiased;
+    font-smoothing:antialiased;
+    color:{color:text};
+    background:{color:background}; 
+}
+
+a {
+    color:{color:link};
+    text-decoration:none; 
+    border-bottom:1px solid {color:border};
+}
+
+blockquote {
+    margin:0px 0px 5px 0px; 
+    padding:0px 5px 0px 15px;
+    border-left:1px solid {color:border};
+}
+
+big, pre, h1, h2, h3, h4, h5, h6, small, sub {
+    font-size:12px; 
+    font-family: 'Lato', sans-serif;
+}
+
+hr {
+    border:0;
+}
+
+img {
+    border:0;
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+
+
+#content { 
+    margin:0 0 120px 350px;
+    width:calc(100vw-350px);
+}
+
+aside {  
+    left:0px;
+    background:{color:sidebar};
+    width:350px;
+    height:100vh;
+    position:fixed;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding:60px 60px 0px 60px;
+    top:0;
+}
+ 
+.title { 
+    text-transform:uppercase;
+    font-weight:900;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#pagination {
+    text-align:center;
+    padding-top:50px;
+}
+
+#pagination a {
+    border:0;
+}
+ 
+#pagination a:last-of-type {
+    margin-right:0!important;
+}
+ 
+.jump_page, .current_page {
+    margin-right:9px;
+}
+ 
+.jump_page {
+    padding: 4px 8px;
+    color:{color:pagination};
+    text-decoration:none;
+}
+ 
+.current_page {
+    padding: 4px 8px 5px 8px;
+    color:{color:pagination};
+    background:{color:pagination background};
+    text-decoration:none;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+}
+
+.user, .user a, .askp, .answerp {
+    text-transform:uppercase;
+    font-weight:900;
+    font-size:11px;
+    color:{color:user}!important;
+    border-bottom:0;
+}
+
+.askp, .answerp {
+    text-align:justify;
+}
+
+.askp a, .answerp a {
+    border-bottom:0;
+}
+
+.answer {
+    margin-top:-10px;
+}
+
+.postnotes {
+    width:calc({text:post width} + {text:permalink width} + 50px);
+    border-top:1px solid {color:border};
+    padding-top:70px;
+    margin:-70px auto 0 auto;
+}
+
+.notesvia{
+    margin-bottom:30px;
+    text-transform:uppercase;
+    font-weight:700;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.notes a {
+    color:{color:text};
+    border-bottom:none;
+}
+
+.quote, .src {  
+    line-height:190%;
+} 
+
+.quote {
+    font-size:14px; 
+    font-style:italic;
+    text-align:justify;
+}
+
+.src {
+    font-size:10px;
+    margin-top:10px;
+    text-align:right;
+}
+
+.w {
+    max-width:{text:post width};
+    max-height:{text:post width};
+}
+ 
+.vc {
+    overflow:hidden;
+}
+ 
+.vc iframe, .vc object, .vc embed {
+    max-width:{text:post width};
+    max-height:{text:post width};
+}
+
+.music iframe { 
+    max-width: 100%; 
+    height: 85px;
+}
+
+.music {
+    margin-bottom:-7px;
+}
+   
+ol.notes{
+    padding:0;
+    margin:0;
+}
+
+ol.notes li {
+    list-style-type: none;
+}
+ 
+ol.notes li.note img{
+    width:0px;
+    height:0px;
+}
+ 
+ol.notes li.note{
+    margin:0px;
+} 
+
+.vignette, #vignette {
+    opacity:0;
+}
+.lightbox-image, #tumblr_lightbox img {
+    box-shadow:none !important;
+    border-radius:0 !important;
+    max-width:none;
+}
+
+.photo-slideshow a {
+    border:0!important;
+}
+
+.tmblr-lightbox, #tumblr_lightbox {
+    background-color:rgba(255,255,255,.7) !important;
+}
+
+.more_notes_link_container {
+    text-align:left!important;
+}
+
+.w {
+    max-width:{text:post width};
+    max-height:{text:post width};
+}
+ 
+.vc {
+    overflow:hidden;
+}
+ 
+.vc iframe, .vc object, .vc embed {
+    max-width:{text:post width};
+    max-height:{text:post width};
+}
+
+.tags {
+    margin-top:15px;
+}
+ 
+.tags a {
+    display:inline;
+    border-bottom:0;
+    color:{color:tag};
+    background:{color:tag background};
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding:3px 6px 5px 9px;
+    margin-right:10px;
+    line-height:260%;
+    border-radius:20px;
+}
+
+.current_page, .tags a {
+    -webkit-transition:all .4s ease-out;
+    transition:all .4s ease-out;
+}
+
+.tags a:hover {
+    -webkit-box-shadow: 0px 2px 0px 0px {color:tag hover shadow};
+    -moz-box-shadow: 0px 2px 0px 0px {color:tag hover shadow};
+    box-shadow: 0px 2px 0px 0px {color:tag hover shadow};
+    -webkit-transition:all .4s ease-in;
+    transition:all .4s ease-in;
+}
+
+.current_page:hover {
+    -webkit-box-shadow: 0px 2px 0px 0px {color:pagination hover shadow};
+    -moz-box-shadow: 0px 2px 0px 0px {color:pagination hover shadow};
+    box-shadow: 0px 2px 0px 0px {color:pagination hover shadow};
+    -webkit-transition:all .4s ease-in;
+    transition:all .4s ease-in;
+}
+
+.captions {
+    text-align:justify;
+}
+
+.captions a {
+    color:{text:link};
+}
+
+.captions blockquote {
+    margin:0px 0px 5px 0px; 
+    padding:0px 5px 0px 15px;
+    border-left:1px solid {color:border};
+}
+
+#sidetop {
+    position:relative;
+}
+
+#icon {
+    position:absolute;
+    width:80px;
+}
+
+#icon img {
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+}
+
+#info {
+    margin-left:100px;
+    height:80px;
+    display: flex;
+    align-items:center;
+}
+
+#name {
+    font-family: 'Open Sans', sans-serif;
+    font-weight:800;
+    font-size:23px;
+    color:{color:blog title};
+    margin-bottom:10px;
+}
+
+#location {
+    color:{color:tagline};
+    font-weight:900;
+    font-size:13px;
+    text-transform:uppercase;
+}
+
+#description {
+    border-top:1px solid {color:border};
+    padding-top:30px;
+    color:{color:description};
+    margin-top:30px;
+    text-align:justify;
+    font-size:13px;
+}
+
+#nav {
+    margin-top:30px;
+}
+
+#nav a {
+    color:{color:sidebar links};
+    border-bottom:none;
+    text-transform:uppercase;
+    font-size:13px;
+    display:block;
+    font-family: 'Open Sans', sans-serif;
+    font-weight:800;
+    margin-bottom:7px;
+    -webkit-transition:all .4s ease-out;
+    transition:all .4s ease-out;
+}
+
+#nav a:hover {
+    color:{color:sidebar links hover};
+}
+
+#form {
+    margin-top:30px;
+}
+
+.search .query {
+   border: 0;
+   outline: 0;
+   height:25px;
+   padding: 3px 20px 5px 20px;
+   font-size:10px;
+   color: inherit;
+   font-weight:800;
+   border-radius:20px;
+   text-transform:uppercase;
+   font-family: 'Open Sans', sans-serif;
+   background-color:{color:search bar};
+   color:{color:search bar text};
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   width:100%;
+}
+
+::-webkit-input-placeholder {color: inherit;}
+:-moz-placeholder {color: inherit; opacity:1;}
+::-moz-placeholder {color: inherit; opacity:1;}
+:-ms-input-placeholder {color: inherit;}
+
+input:focus::-webkit-input-placeholder {color: transparent;}
+input:focus:-moz-placeholder {color: transparent;}
+input:focus::-moz-placeholder {color: transparent;}
+input:focus:-ms-input-placeholder { color: transparent;}
+
+.contain:first-of-type {
+    margin-top:120px!important;
+}
+
+
+.contain:last-of-type {
+    padding-bottom:0px;
+    border-bottom:0px;
+}
+
+.contain {
+    display:flex;
+    justify-content:space-between;
+    width:calc({text:post width} + {text:permalink width} + 50px);
+    margin:0px auto 70px auto;
+    padding-bottom:70px;
+    {block:IndexPage}
+    border-bottom:1px solid {color:border};
+    {/block:IndexPage}
+}
+
+.cap {
+    width:{text:permalink width};
+}
+
+.posts {
+    width:{text:post width};
+}
+
+.textpost {
+    width:{text:post width};
+    margin:auto;
+    text-align:justify;
+}
+
+.textpostperma {
+    width:{text:post width};
+}
+
+.textpostperma a {
+    border:0;
+}
+
+.vias, .textpostvias {
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+}
+
+.textpostvias {
+    position:absolute;
+}
+
+
+.postinfo {
+    margin-top:20px;
+    {block:ifnotshowviaicon}
+    margin-top:0;
+    {/block:ifnotshowviaicon}
+    
+}
+
+.textpostinfo {
+    margin-top:20px;
+    height:24px;
+    display: flex;
+    align-items:center;
+}
+
+.date a {
+    border-bottom:0;
+}
+
+.date a, .textpostdate a{
+    color:{color:permalink date};
+    font-family: 'Open Sans', sans-serif;
+    font-weight:800;
+    text-transform:uppercase;
+}
+
+.textpostdate {
+    margin:0 15px 0 39px;
+    {block:ifnotshowviaicon}
+    margin:0 15px 0 0;
+    {/block:ifnotshowviaicon}
+}
+
+.date {
+    font-size:14px;
+}
+
+.pnotes, .textpostnotes {
+    color:{color:note count};
+}
+
+.textpostnotes {
+    font-family: 'Open Sans', sans-serif;
+    text-transform:uppercase;
+    font-weight:800;
+}
+
+.pnotes {
+    font-size:13px;
+    margin-top:10px;
+    font-weight:900;
+}
+
+
+
+
+</style> </head> <body>
+
+<aside>
+<div id="sidetop">
+<div id="icon"><a href="/"><img src="{image:icon}"></a></div>
+
+<div id="info">
+<div id="info-txt">
+<div id="name">{text:blog title}</div>
+<div id="location">{text:tagline}</div>
+</div>
+</div>
+
+<div id="form">
+<form action="/search" method="get" class="search">
+<input type="text" name="q" value="{SearchQuery}" class="query" placeholder="search...">
+</form>
+</div>
+
+<div id="description">
+{description}
+</div>
+
+<div id="nav">
+{block:iflink1}
+<a href="{text:link 1 url}">{text:link 1}</a>
+{/block:iflink1}
+ 
+{block:iflink2}
+<a href="{text:link 2 url}">{text:link 2}</a>
+{/block:iflink2}
+ 
+{block:iflink3}
+<a href="{text:link 3 url}">{text:link 3}</a>
+{/block:iflink3}
+
+{block:iflink4}
+<a href="{text:link 4 url}">{text:link 4}</a>
+{/block:iflink4}
+ 
+{block:iflink5}
+<a href="{text:link 5 url}">{text:link 5}</a>
+{/block:iflink5}
+ 
+{block:iflink6}
+<a href="{text:link 6 url}">{text:link 6}</a>
+{/block:iflink6}
+</div>
+
+
+</div>
+</aside>
+
+
+
+<div id="content">
+ 
+{block:Posts}
+ 
+
+{block:ContentSource}<!-- {SourceURL}{block:SourceLogo}<img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" /> {/block:SourceLogo}{block:NoSourceLogo}{SourceLink}{/block:NoSourceLogo} -->{/block:ContentSource}<!-- {block:NoRebloggedFrom}{block:RebloggedFrom}{ReblogParentName}{/block:RebloggedFrom}{/block:NoRebloggedFrom} -->
+
+
+{block:Text}
+
+
+<div class="contain">
+
+<div class="box textpost">
+
+{block:Title}<div class="title">{Title}</div>{/block:Title}
+{block:Body}
+<div class="captions" style="margin-top:15px">
+{block:NotReblog}{Body}{/block:NotReblog}
+{block:RebloggedFrom}{block:Reblogs}
+    {block:HasPermalink}<a target="_blank" class="user" href="{Permalink}">{Username}</a>{/block:HasPermalink}
+    {block:HasNoPermalink}<span class="user">{Username}</span>{/block:HasNoPermalink}
+        <div style="margin-top:-10px">{Body}</div>
+{/block:Reblogs}{/block:RebloggedFrom}
+</div>
+{/block:Body}
+
+{block:ifshowcaptions}{block:indexpage}{block:Caption}
+<div class="captions">
+{block:NotReblog}{Caption}{/block:NotReblog}
+{block:RebloggedFrom}{block:Reblogs}
+<div style="margin-top:15px">
+    {block:HasPermalink}<a target="_blank" class="user" href="{Permalink}">{Username}</a>{/block:HasPermalink}
+    {block:HasNoPermalink}<span class="user">{Username}</span>{/block:HasNoPermalink}
+       <div style="margin-top:-10px">{Body}</div>
+        </div>
+{/block:Reblogs}{/block:RebloggedFrom}
+</div>
+{/block:Caption}{/block:indexpage}{/block:ifshowcaptions}
+
+
+{block:permalinkpage}{block:Caption}
+<div class="captions">
+{block:NotReblog}{Caption}{/block:NotReblog}
+{block:RebloggedFrom}{block:Reblogs}
+<div style="margin-top:15px">
+    {block:HasPermalink}<a target="_blank" class="user" href="{Permalink}">{Username}</a>{/block:HasPermalink}
+    {block:HasNoPermalink}<span class="user">{Username}</span>{/block:HasNoPermalink}
+       <div style="margin-top:-10px">{Body}</div>
+        </div>
+{/block:Reblogs}{/block:RebloggedFrom}
+</div>
+{/block:Caption}{/block:permalinkpage}
+
+{block:date}
+<div class="textpostperma">
+{block:ifshowviaicon}{block:rebloggedfrom}
+<a href="{ReblogParentURL}" title="via {ReblogParentName}"><img class="textpostvias" src="{ReblogParentPortraitURL-24}"></a>
+{/block:rebloggedfrom}{/block:ifshowviaicon}
+
+{block:ifshowviaicon}
+{block:notreblog}
+<a href="{permalink}" title="by {name}"><img class="textpostvias" src="{PortraitURL-24}"></a>
+{/block:notreblog}
+{/block:ifshowviaicon}
+
+{block:date}
+<div class="textpostinfo">
+<div class="textpostdate"><a href="{permalink}">{Month} {DayofMonth}{DayofMonthSuffix}, {Year}</a></div>
+{block:NoteCount}<div class="textpostnotes">{NoteCountwithLabel}</div>{/block:NoteCount}
+<!---end of post info--->
+</div>
+
+<!---end of permalink--->
+</div>
+{/block:date}
+
+{block:indexpage}
+{block:ifshowtags}
+{block:HasTags} <div class="tags">{block:Tags}<a href="{TagURL}">#{Tag} </a>{/block:Tags}</div>{/block:HasTags}{/block:ifshowtags}{/block:indexpage}
+
+{block:permalinkpage}{block:date}{block:HasTags}<div class="tags">{block:Tags}<a href="{TagURL}">#{Tag} </a>{/block:Tags}</div>{/block:HasTags} {/block:date}{/block:permalinkpage}
+
+<!---end of text box--->
+</div>
+
+<!---end of container---> 
+</div>
+{/block:Text}
+ 
+{block:Answer}
+<div class="contain">
+
+<div class="box cap">
+
+<div class="pems">
+
+{block:ifshowviaicon}
+{block:rebloggedfrom}
+<a href="{ReblogParentURL}" title="via {ReblogParentName}"><img class="vias" src="{ReblogParentPortraitURL-64}"></a>
+{/block:rebloggedfrom}
+{/block:ifshowviaicon}
+
+{block:ifshowviaicon}
+{block:notreblog}
+<a href="{permalink}" title="by {name}"><img class="vias" src="{PortraitURL-64}"></a>
+{/block:notreblog}
+{/block:ifshowviaicon}
+
+{block:date}
+<div class="postinfo">
+<div class="date"><a href="{permalink}">{Month} {DayofMonth}{DayofMonthSuffix}, {Year}</a></div>
+{block:NoteCount}<div class="pnotes">{NoteCountwithLabel}</div>{/block:NoteCount}
+<!---end of post info--->
+</div>
+{/block:date}
+
+<!---end of permalink--->
+</div>
+<!--end of perma--->
+</div>
+
+<div class="box posts">
+
+<div class="askp">
+{Asker} asked:</div>
+<div style="margin-bottom:15px; padding-bottom:15px;border-bottom:1px solid {color:border};">
+{Question}</div>
+{block:Answerer}
+<div class="answerp">
+{Answerer} replied:</div>
+<div class="answer">
+{Answer}</div>
+{/block:Answerer}
+    {block:NotReblog}
+    <div>{Replies}</div>
+    {/block:NotReblog}
+{block:RebloggedFrom}
+{block:Reblogs}
+    {block:HasPermalink}<a target="_blank" class="user" href="{Permalink}">{Username}</a>{/block:HasPermalink}
+    {block:HasNoPermalink}<span class="user">{Username}</span>{/block:HasNoPermalink}
+<div><div style="margin-top:-10px">{Body}</div></div>
+{/block:Reblogs}
+{/block:RebloggedFrom}
+
+{block:ifshowcaptions}{block:indexpage}{block:Caption}
+<div class="captions">
+{block:NotReblog}{Caption}{/block:NotReblog}
+{block:RebloggedFrom}{block:Reblogs}
+<div style="margin-top:15px">
+    {block:HasPermalink}<a target="_blank" class="user" href="{Permalink}">{Username}</a>{/block:HasPermalink}
+    {block:HasNoPermalink}<span class="user">{Username}</span>{/block:HasNoPermalink}
+       <div style="margin-top:-10px">{Body}</div>
+        </div>
+{/block:Reblogs}{/block:RebloggedFrom}
+</div>
+{/block:Caption}{/block:indexpage}{/block:ifshowcaptions}
+
+
+{block:permalinkpage}{block:Caption}
+<div class="captions">
+{block:NotReblog}{Caption}{/block:NotReblog}
+{block:RebloggedFrom}{block:Reblogs}
+<div style="margin-top:15px">
+    {block:HasPermalink}<a target="_blank" class="user" href="{Permalink}">{Username}</a>{/block:HasPermalink}
+    {block:HasNoPermalink}<span class="user">{Username}</span>{/block:HasNoPermalink}
+       <div style="margin-top:-10px">{Body}</div>
+        </div>
+{/block:Reblogs}{/block:RebloggedFrom}
+</div>
+{/block:Caption}{/block:permalinkpage}
+
+{block:indexpage}
+{block:ifshowtags}
+{block:HasTags} <div class="tags">{block:Tags}<a href="{TagURL}">#{Tag} </a>{/block:Tags}</div>{/block:HasTags}{/block:ifshowtags}{/block:indexpage}
+
+{block:permalinkpage}{block:date}{block:HasTags}<div class="tags">{block:Tags}<a href="{TagURL}">#{Tag} </a>{/block:Tags}</div>{/block:HasTags} {/block:date}{/block:permalinkpage}
+
+<!---end of text box--->
+</div>
+
+<!---end of container---> 
+</div>
+{/block:Answer}
+
+ 
+{block:Quote}
+
+<div class="contain">
+
+<div class="box cap">
+
+<div class="pems">
+{block:ifshowviaicon}
+{block:rebloggedfrom}
+<a href="{ReblogParentURL}" title="via {ReblogParentName}"><img class="vias" src="{ReblogParentPortraitURL-64}"></a>
+{/block:rebloggedfrom}
+{/block:ifshowviaicon}
+
+{block:ifshowviaicon}
+{block:notreblog}
+<a href="{permalink}" title="by {name}"><img class="vias" src="{PortraitURL-64}"></a>
+{/block:notreblog}
+{/block:ifshowviaicon}
+
+{block:date}
+<div class="postinfo">
+<div class="date"><a href="{permalink}">{Month} {DayofMonth}{DayofMonthSuffix}, {Year}</a></div>
+{block:NoteCount}<div class="pnotes">{NoteCountwithLabel}</div>{/block:NoteCount}
+<!---end of post info--->
+</div>
+{/block:date}
+
+<!---end of permalink--->
+</div>
+<!--end of perma--->
+</div>
+
+<div class="box posts">
+
+<div class="quote">{Quote}</div>
+{block:source}
+<div class="src">&mdash; {source}</div>
+{/block:source}
+
+{block:ifshowcaptions}{block:indexpage}{block:Caption}
+<div class="captions">
+{block:NotReblog}{Caption}{/block:NotReblog}
+{block:RebloggedFrom}{block:Reblogs}
+<div style="margin-top:15px">
+    {block:HasPermalink}<a target="_blank" class="user" href="{Permalink}">{Username}</a>{/block:HasPermalink}
+    {block:HasNoPermalink}<span class="user">{Username}</span>{/block:HasNoPermalink}
+       <div style="margin-top:-10px">{Body}</div>
+        </div>
+{/block:Reblogs}{/block:RebloggedFrom}
+</div>
+{/block:Caption}{/block:indexpage}{/block:ifshowcaptions}
+
+
+{block:permalinkpage}{block:Caption}
+<div class="captions">
+{block:NotReblog}{Caption}{/block:NotReblog}
+{block:RebloggedFrom}{block:Reblogs}
+<div style="margin-top:15px">
+    {block:HasPermalink}<a target="_blank" class="user" href="{Permalink}">{Username}</a>{/block:HasPermalink}
+    {block:HasNoPermalink}<span class="user">{Username}</span>{/block:HasNoPermalink}
+       <div style="margin-top:-10px">{Body}</div>
+        </div>
+{/block:Reblogs}{/block:RebloggedFrom}
+</div>
+{/block:Caption}{/block:permalinkpage}
+
+{block:indexpage}
+{block:ifshowtags}
+{block:HasTags} <div class="tags">{block:Tags}<a href="{TagURL}">#{Tag} </a>{/block:Tags}</div>{/block:HasTags}{/block:ifshowtags}{/block:indexpage}
+
+{block:permalinkpage}{block:date}{block:HasTags}<div class="tags">{block:Tags}<a href="{TagURL}">#{Tag} </a>{/block:Tags}</div>{/block:HasTags} {/block:date}{/block:permalinkpage}
+
+<!---end of text box--->
+</div>
+
+<!---end of container---> 
+</div>
+{/block:Quote}
+ 
+{block:Link}
+<div class="contain">
+
+<div class="box cap">
+
+<div class="pems">
+{block:ifshowviaicon}
+{block:rebloggedfrom}
+<a href="{ReblogParentURL}" title="via {ReblogParentName}"><img class="vias" src="{ReblogParentPortraitURL-64}"></a>
+{/block:rebloggedfrom}
+{/block:ifshowviaicon}
+
+{block:ifshowviaicon}
+{block:notreblog}
+<a href="{permalink}" title="by {name}"><img class="vias" src="{PortraitURL-64}"></a>
+{/block:notreblog}
+{/block:ifshowviaicon}
+
+{block:date}
+<div class="postinfo">
+<div class="date"><a href="{permalink}">{Month} {DayofMonth}{DayofMonthSuffix}, {Year}</a></div>
+{block:NoteCount}<div class="pnotes">{NoteCountwithLabel}</div>{/block:NoteCount}
+
+{block:ifshowcaptions}{block:ifsidecaptions}{block:indexpage}{block:Caption}
+<div class="captions">
+{block:NotReblog}{Caption}{/block:NotReblog}
+{block:RebloggedFrom}{block:Reblogs}
+<div style="margin-top:15px">
+    {block:HasPermalink}<a target="_blank" class="user" href="{Permalink}">{Username}</a>{/block:HasPermalink}
+    {block:HasNoPermalink}<span class="user">{Username}</span>{/block:HasNoPermalink}
+        <div style="margin-top:-10px">{Body}</div>
+        </div>
+{/block:Reblogs}{/block:RebloggedFrom}
+</div>
+{/block:Caption}{/block:indexpage}{/block:ifsidecaptions}{/block:ifshowcaptions}
+
+{block:permalinkpage}
+{block:ifsidecaptions}{block:Caption}
+<div class="captions">
+{block:NotReblog}{Caption}{/block:NotReblog}
+{block:RebloggedFrom}{block:Reblogs}
+<div style="margin-top:15px">
+    {block:HasPermalink}<a target="_blank" class="user" href="{Permalink}">{Username}</a>{/block:HasPermalink}
+    {block:HasNoPermalink}<span class="user">{Username}</span>{/block:HasNoPermalink}
+        <div style="margin-top:-10px">{Body}</div>
+        </div>
+{/block:Reblogs}{/block:RebloggedFrom}
+</div>
+{/block:Caption}{/block:ifsidecaptions}
+{/block:permalinkpage}
+
+<!---end of post info--->
+</div>
+{/block:date}
+
+<!---end of permalink--->
+</div>
+<!--end of perma--->
+</div>
+
+<div class="box posts">
+
+<div class="title"><a href="{URL}">{Name}</a></div>
+{block:Description}
+{block:NotReblog}{Description}{/block:NotReblog}
+{block:RebloggedFrom}{block:Reblogs}
+    {block:HasPermalink}<a target="_blank" class="user" href="{Permalink}">{Username}</a>{/block:HasPermalink}
+    {block:HasNoPermalink}<span class="user">{Username}</span>{/block:HasNoPermalink}
+        <div style="margin-top:-10px">{body}</div>
+{/block:Reblogs}{/block:RebloggedFrom}
+{/block:Description}
+
+{block:ifshowcaptions}{block:ifnotsidecaptions}{block:indexpage}{block:Caption}
+<div class="captions">
+{block:NotReblog}{Caption}{/block:NotReblog}
+{block:RebloggedFrom}{block:Reblogs}
+<div style="margin-top:15px">
+    {block:HasPermalink}<a target="_blank" class="user" href="{Permalink}">{Username}</a>{/block:HasPermalink}
+    {block:HasNoPermalink}<span class="user">{Username}</span>{/block:HasNoPermalink}
+        <div style="margin-top:-10px">{Body}</div>
+        </div>
+{/block:Reblogs}{/block:RebloggedFrom}
+</div>
+{/block:Caption}{/block:indexpage}{/block:ifnotsidecaptions}{/block:ifshowcaptions}
+
+{block:permalinkpage}{block:ifnotsidecaptions}{block:Caption}
+<div class="captions">
+{block:NotReblog}{Caption}{/block:NotReblog}
+{block:RebloggedFrom}{block:Reblogs}
+<div style="margin-top:15px">
+    {block:HasPermalink}<a target="_blank" class="user" href="{Permalink}">{Username}</a>{/block:HasPermalink}
+    {block:HasNoPermalink}<span class="user">{Username}</span>{/block:HasNoPermalink}
+        <div style="margin-top:-10px">{Body}</div>
+        </div>
+{/block:Reblogs}{/block:RebloggedFrom}
+</div>
+{/block:Caption}{/block:ifnotsidecaptions}{/block:permalinkpage}
+
+{block:indexpage}
+{block:ifshowtags}
+{block:HasTags} <div class="tags">{block:Tags}<a href="{TagURL}">#{Tag} </a>{/block:Tags}</div>{/block:HasTags}{/block:ifshowtags}{/block:indexpage}
+
+{block:permalinkpage}{block:date}{block:HasTags}<div class="tags">{block:Tags}<a href="{TagURL}">#{Tag} </a>{/block:Tags}</div>{/block:HasTags} {/block:date}{/block:permalinkpage}
+
+<!---end of image box--->
+</div>
+
+<!---end of container---> 
+</div>
+{/block:Link}
+ 
+{block:Chat}
+
+<div class="contain">
+
+<div class="box cap">
+
+<div class="pems">
+{block:ifshowviaicon}
+{block:rebloggedfrom}
+<a href="{ReblogParentURL}" title="via {ReblogParentName}"><img class="vias" src="{ReblogParentPortraitURL-64}"></a>
+{/block:rebloggedfrom}
+{/block:ifshowviaicon}
+
+{block:ifshowviaicon}
+{block:notreblog}
+<a href="{permalink}" title="by {name}"><img class="vias" src="{PortraitURL-64}"></a>
+{/block:notreblog}
+{/block:ifshowviaicon}
+
+{block:date}
+<div class="postinfo">
+<div class="date"><a href="{permalink}">{Month} {DayofMonth}{DayofMonthSuffix}, {Year}</a></div>
+{block:NoteCount}<div class="pnotes">{NoteCountwithLabel}</div>{/block:NoteCount}
+<!---end of post info--->
+</div>
+{/block:date}
+
+<!---end of permalink--->
+</div>
+<!--end of perma--->
+</div>
+
+<div class="box posts">
+
+{block:Title}{Title}{/block:Title}
+{block:Lines}
+{block:Label}<div style="font-weight:900;display:inline;margin-right:5px;">{Label}</div>{/block:Label}{Line}<br>
+{/block:Lines} 
+
+{block:ifshowcaptions}{block:indexpage}{block:Caption}
+<div class="captions">
+{block:NotReblog}{Caption}{/block:NotReblog}
+{block:RebloggedFrom}{block:Reblogs}
+<div style="margin-top:15px">
+    {block:HasPermalink}<a target="_blank" class="user" href="{Permalink}">{Username}</a>{/block:HasPermalink}
+    {block:HasNoPermalink}<span class="user">{Username}</span>{/block:HasNoPermalink}
+       <div style="margin-top:-10px">{Body}</div>
+        </div>
+{/block:Reblogs}{/block:RebloggedFrom}
+</div>
+{/block:Caption}{/block:indexpage}{/block:ifshowcaptions}
+
+
+{block:permalinkpage}{block:Caption}
+<div class="captions">
+{block:NotReblog}{Caption}{/block:NotReblog}
+{block:RebloggedFrom}{block:Reblogs}
+<div style="margin-top:15px">
+    {block:HasPermalink}<a target="_blank" class="user" href="{Permalink}">{Username}</a>{/block:HasPermalink}
+    {block:HasNoPermalink}<span class="user">{Username}</span>{/block:HasNoPermalink}
+       <div style="margin-top:-10px">{Body}</div>
+        </div>
+{/block:Reblogs}{/block:RebloggedFrom}
+</div>
+{/block:Caption}{/block:permalinkpage}
+
+{block:indexpage}
+{block:ifshowtags}
+{block:HasTags} <div class="tags">{block:Tags}<a href="{TagURL}">#{Tag} </a>{/block:Tags}</div>{/block:HasTags}{/block:ifshowtags}{/block:indexpage}
+
+{block:permalinkpage}{block:date}{block:HasTags}<div class="tags">{block:Tags}<a href="{TagURL}">#{Tag} </a>{/block:Tags}</div>{/block:HasTags} {/block:date}{/block:permalinkpage}
+
+<!---end of text box--->
+</div>
+
+<!---end of container---> 
+</div>
+{/block:Chat}
+ 
+{block:Photo}
+
+<div class="contain">
+
+<div class="box cap">
+
+<div class="pems">
+{block:ifshowviaicon}
+{block:rebloggedfrom}
+<a href="{ReblogParentURL}" title="via {ReblogParentName}"><img class="vias" src="{ReblogParentPortraitURL-64}"></a>
+{/block:rebloggedfrom}
+{/block:ifshowviaicon}
+
+{block:ifshowviaicon}
+{block:notreblog}
+<a href="{permalink}" title="by {name}"><img class="vias" src="{PortraitURL-64}"></a>
+{/block:notreblog}
+{/block:ifshowviaicon}
+
+{block:date}
+<div class="postinfo">
+<div class="date"><a href="{permalink}">{Month} {DayofMonth}{DayofMonthSuffix}, {Year}</a></div>
+{block:NoteCount}<div class="pnotes">{NoteCountwithLabel}</div>{/block:NoteCount}
+
+{block:ifshowcaptions}{block:ifsidecaptions}{block:indexpage}{block:Caption}
+<div class="captions">
+{block:NotReblog}{Caption}{/block:NotReblog}
+{block:RebloggedFrom}{block:Reblogs}
+<div style="margin-top:15px">
+    {block:HasPermalink}<a target="_blank" class="user" href="{Permalink}">{Username}</a>{/block:HasPermalink}
+    {block:HasNoPermalink}<span class="user">{Username}</span>{/block:HasNoPermalink}
+        <div style="margin-top:-10px">{Body}</div>
+        </div>
+{/block:Reblogs}{/block:RebloggedFrom}
+</div>
+{/block:Caption}{/block:indexpage}{/block:ifsidecaptions}{/block:ifshowcaptions}
+
+{block:permalinkpage}
+{block:ifsidecaptions}{block:Caption}
+<div class="captions">
+{block:NotReblog}{Caption}{/block:NotReblog}
+{block:RebloggedFrom}{block:Reblogs}
+<div style="margin-top:15px">
+    {block:HasPermalink}<a target="_blank" class="user" href="{Permalink}">{Username}</a>{/block:HasPermalink}
+    {block:HasNoPermalink}<span class="user">{Username}</span>{/block:HasNoPermalink}
+        <div style="margin-top:-10px">{Body}</div>
+        </div>
+{/block:Reblogs}{/block:RebloggedFrom}
+</div>
+{/block:Caption}{/block:ifsidecaptions}
+{/block:permalinkpage}
+
+<!---end of post info--->
+</div>
+{/block:date}
+
+<!---end of permalink--->
+</div>
+<!--end of perma--->
+</div>
+
+<div class="box posts">
+<a href="#" onclick="Tumblr.Lightbox.init([{ width: {PhotoWidth-HighRes}, height: {PhotoHeight-HighRes}, low_res: '{PhotoURL-500}', high_res: '{PhotoURL-HighRes}' }]); $('body').toggleClass('tumblr_lightbox_active'); return false"><img style="width:100%;" src="{PhotoURL-HighRes}"></a>
+
+
+{block:ifshowcaptions}{block:ifnotsidecaptions}{block:indexpage}{block:Caption}
+<div class="captions">
+{block:NotReblog}{Caption}{/block:NotReblog}
+{block:RebloggedFrom}{block:Reblogs}
+<div style="margin-top:15px">
+    {block:HasPermalink}<a target="_blank" class="user" href="{Permalink}">{Username}</a>{/block:HasPermalink}
+    {block:HasNoPermalink}<span class="user">{Username}</span>{/block:HasNoPermalink}
+        <div style="margin-top:-10px">{Body}</div>
+        </div>
+{/block:Reblogs}{/block:RebloggedFrom}
+</div>
+{/block:Caption}{/block:indexpage}{/block:ifnotsidecaptions}{/block:ifshowcaptions}
+
+{block:permalinkpage}{block:ifnotsidecaptions}{block:Caption}
+<div class="captions">
+{block:NotReblog}{Caption}{/block:NotReblog}
+{block:RebloggedFrom}{block:Reblogs}
+<div style="margin-top:15px">
+    {block:HasPermalink}<a target="_blank" class="user" href="{Permalink}">{Username}</a>{/block:HasPermalink}
+    {block:HasNoPermalink}<span class="user">{Username}</span>{/block:HasNoPermalink}
+        <div style="margin-top:-10px">{Body}</div>
+        </div>
+{/block:Reblogs}{/block:RebloggedFrom}
+</div>
+{/block:Caption}{/block:ifnotsidecaptions}{/block:permalinkpage}
+
+{block:indexpage}
+{block:ifshowtags}
+{block:HasTags} <div class="tags">{block:Tags}<a href="{TagURL}">#{Tag} </a>{/block:Tags}</div>{/block:HasTags}{/block:ifshowtags}{/block:indexpage}
+
+{block:permalinkpage}{block:date}{block:HasTags}<div class="tags">{block:Tags}<a href="{TagURL}">#{Tag} </a>{/block:Tags}</div>{/block:HasTags} {/block:date}{/block:permalinkpage}
+
+<!---end of image box--->
+</div>
+
+<!---end of container---> 
+</div>
+
+{/block:Photo}
+
+
+ 
+{block:Photoset}
+
+<div class="contain">
+
+<div class="box cap">
+
+<div class="pems">
+{block:ifshowviaicon}
+{block:rebloggedfrom}
+<a href="{ReblogParentURL}" title="via {ReblogParentName}"><img class="vias" src="{ReblogParentPortraitURL-64}"></a>
+{/block:rebloggedfrom}
+{/block:ifshowviaicon}
+
+{block:ifshowviaicon}
+{block:notreblog}
+<a href="{permalink}" title="by {name}"><img class="vias" src="{PortraitURL-64}"></a>
+{/block:notreblog}
+{/block:ifshowviaicon}
+
+{block:date}
+<div class="postinfo">
+<div class="date"><a href="{permalink}">{Month} {DayofMonth}{DayofMonthSuffix}, {Year}</a></div>
+{block:NoteCount}<div class="pnotes">{NoteCountwithLabel}</div>{/block:NoteCount}
+
+{block:ifshowcaptions}{block:ifsidecaptions}{block:indexpage}{block:Caption}
+<div class="captions">
+{block:NotReblog}{Caption}{/block:NotReblog}
+{block:RebloggedFrom}{block:Reblogs}
+<div style="margin-top:15px">
+    {block:HasPermalink}<a target="_blank" class="user" href="{Permalink}">{Username}</a>{/block:HasPermalink}
+    {block:HasNoPermalink}<span class="user">{Username}</span>{/block:HasNoPermalink}
+       <div style="margin-top:-10px">{Body}</div>
+        </div>
+{/block:Reblogs}{/block:RebloggedFrom}
+</div>
+{/block:Caption}{/block:indexpage}{/block:ifsidecaptions}{/block:ifshowcaptions}
+
+{block:permalinkpage}{block:ifsidecaptions}{block:Caption}
+<div class="captions">
+{block:NotReblog}{Caption}{/block:NotReblog}
+{block:RebloggedFrom}{block:Reblogs}
+<div style="margin-top:15px">
+    {block:HasPermalink}<a target="_blank" class="user" href="{Permalink}">{Username}</a>{/block:HasPermalink}
+    {block:HasNoPermalink}<span class="user">{Username}</span>{/block:HasNoPermalink}
+       <div style="margin-top:-10px">{Body}</div>
+        </div>
+{/block:Reblogs}{/block:RebloggedFrom}
+</div>
+{/block:Caption}{/block:ifsidecaptions}{/block:permalinkpage}
+<!---end of post info--->
+</div>
+{/block:date}
+
+<!---end of permalink--->
+</div>
+<!--end of perma--->
+</div>
+
+<div class="box posts">
+
+<a href="#" onclick="Tumblr.Lightbox.init([/*{block:Photos}, /**/ { width: {PhotoWidth-HighRes}, height: {PhotoHeight-HighRes}, low_res: '{PhotoURL-500}', high_res: '{PhotoURL-HighRes}' }{/block:Photos}]); $('body').toggleClass('tumblr_lightbox_active'); return false"><div style="max-width:100%;"><div class="photo-slideshow" id="photoset_{PostID}" data-layout="{PhotosetLayout}">{block:Photos}<div class="photo-data"><div class="pxu-photo"><img src="{PhotoURL-500}" width="{PhotoWidth-500}" height="{PhotoHeight-500}" data-highres="{PhotoURL-HighRes}" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}"></div><a class="tumblr-box" rel="post-{PostID}" href="{PhotoURL-HighRes}"></a></div>{/block:Photos}</div></div></a>
+
+{block:ifshowcaptions}{block:ifnotsidecaptions}{block:indexpage}{block:Caption}
+<div class="captions">
+{block:NotReblog}{Caption}{/block:NotReblog}
+{block:RebloggedFrom}{block:Reblogs}
+<div style="margin-top:15px">
+    {block:HasPermalink}<a target="_blank" class="user" href="{Permalink}">{Username}</a>{/block:HasPermalink}
+    {block:HasNoPermalink}<span class="user">{Username}</span>{/block:HasNoPermalink}
+       <div style="margin-top:-10px">{Body}</div>
+        </div>
+{/block:Reblogs}{/block:RebloggedFrom}
+</div>
+{/block:Caption}{/block:indexpage}{/block:ifnotsidecaptions}{/block:ifshowcaptions}
+
+
+{block:permalinkpage}{block:ifnotsidecaptions}{block:Caption}
+<div class="captions">
+{block:NotReblog}{Caption}{/block:NotReblog}
+{block:RebloggedFrom}{block:Reblogs}
+<div style="margin-top:15px">
+    {block:HasPermalink}<a target="_blank" class="user" href="{Permalink}">{Username}</a>{/block:HasPermalink}
+    {block:HasNoPermalink}<span class="user">{Username}</span>{/block:HasNoPermalink}
+       <div style="margin-top:-10px">{Body}</div>
+        </div>
+{/block:Reblogs}{/block:RebloggedFrom}
+</div>
+{/block:Caption}{/block:ifnotsidecaptions}{/block:permalinkpage}
+
+{block:indexpage}
+{block:ifshowtags}
+{block:HasTags} <div class="tags">{block:Tags}<a href="{TagURL}">#{Tag} </a>{/block:Tags}</div>{/block:HasTags}{/block:ifshowtags}{/block:indexpage}
+
+{block:permalinkpage}{block:date}{block:HasTags}<div class="tags">{block:Tags}<a href="{TagURL}">#{Tag} </a>{/block:Tags}</div>{/block:HasTags} {/block:date}{/block:permalinkpage}
+
+<!---end of image box--->
+</div>
+
+<!---end of container---> 
+</div>
+
+{/block:Photoset}
+
+{block:Audio}
+<div class="contain">
+
+<div class="box cap">
+
+<div class="pems">
+{block:ifshowviaicon}
+{block:rebloggedfrom}
+<a href="{ReblogParentURL}" title="via {ReblogParentName}"><img class="vias" src="{ReblogParentPortraitURL-64}"></a>
+{/block:rebloggedfrom}
+{/block:ifshowviaicon}
+
+{block:ifshowviaicon}
+{block:notreblog}
+<a href="{permalink}" title="by {name}"><img class="vias" src="{PortraitURL-64}"></a>
+{/block:notreblog}
+{/block:ifshowviaicon}
+
+{block:date}
+<div class="postinfo">
+<div class="date"><a href="{permalink}">{Month} {DayofMonth}{DayofMonthSuffix}, {Year}</a></div>
+{block:NoteCount}<div class="pnotes">{NoteCountwithLabel}</div>{/block:NoteCount}
+
+{block:ifshowcaptions}{block:ifsidecaptions}{block:indexpage}{block:Caption}
+<div class="captions">
+{block:NotReblog}{Caption}{/block:NotReblog}
+{block:RebloggedFrom}{block:Reblogs}
+<div style="margin-top:15px">
+    {block:HasPermalink}<a target="_blank" class="user" href="{Permalink}">{Username}</a>{/block:HasPermalink}
+    {block:HasNoPermalink}<span class="user">{Username}</span>{/block:HasNoPermalink}
+       <div style="margin-top:-10px">{Body}</div>
+        </div>
+{/block:Reblogs}{/block:RebloggedFrom}
+</div>
+{/block:Caption}{/block:indexpage}{/block:ifsidecaptions}{/block:ifshowcaptions}
+
+{block:permalinkpage}{block:ifsidecaptions}{block:Caption}
+<div class="captions">
+{block:NotReblog}{Caption}{/block:NotReblog}
+{block:RebloggedFrom}{block:Reblogs}
+<div style="margin-top:15px">
+    {block:HasPermalink}<a target="_blank" class="user" href="{Permalink}">{Username}</a>{/block:HasPermalink}
+    {block:HasNoPermalink}<span class="user">{Username}</span>{/block:HasNoPermalink}
+       <div style="margin-top:-10px">{Body}</div>
+        </div>
+{/block:Reblogs}{/block:RebloggedFrom}
+</div>
+{/block:Caption}{/block:ifsidecaptions}{/block:permalinkpage}
+<!---end of post info--->
+</div>
+{/block:date}
+
+<!---end of permalink--->
+</div>
+<!--end of perma--->
+</div>
+
+<div class="box posts">
+
+<div class="music">{AudioEmbed}</div>
+
+
+{block:ifshowcaptions}{block:ifnotsidecaptions}{block:indexpage}{block:Caption}
+<div class="captions">
+{block:NotReblog}{Caption}{/block:NotReblog}
+{block:RebloggedFrom}{block:Reblogs}
+<div style="margin-top:15px">
+    {block:HasPermalink}<a target="_blank" class="user" href="{Permalink}">{Username}</a>{/block:HasPermalink}
+    {block:HasNoPermalink}<span class="user">{Username}</span>{/block:HasNoPermalink}
+       <div style="margin-top:-10px">{Body}</div>
+        </div>
+{/block:Reblogs}{/block:RebloggedFrom}
+</div>
+{/block:Caption}{/block:indexpage}{/block:ifnotsidecaptions}{/block:ifshowcaptions}
+
+
+{block:permalinkpage}{block:ifnotsidecaptions}{block:Caption}
+<div class="captions">
+{block:NotReblog}{Caption}{/block:NotReblog}
+{block:RebloggedFrom}{block:Reblogs}
+<div style="margin-top:15px">
+    {block:HasPermalink}<a target="_blank" class="user" href="{Permalink}">{Username}</a>{/block:HasPermalink}
+    {block:HasNoPermalink}<span class="user">{Username}</span>{/block:HasNoPermalink}
+       <div style="margin-top:-10px">{Body}</div>
+        </div>
+{/block:Reblogs}{/block:RebloggedFrom}
+</div>
+{/block:Caption}{/block:ifnotsidecaptions}{/block:permalinkpage}
+
+{block:indexpage}
+{block:ifshowtags}
+{block:HasTags} <div class="tags">{block:Tags}<a href="{TagURL}">#{Tag} </a>{/block:Tags}</div>{/block:HasTags}{/block:ifshowtags}{/block:indexpage}
+
+{block:permalinkpage}{block:date}{block:HasTags}<div class="tags">{block:Tags}<a href="{TagURL}">#{Tag} </a>{/block:Tags}</div>{/block:HasTags} {/block:date}{/block:permalinkpage}
+
+<!---end of image box--->
+</div>
+
+<!---end of container---> 
+</div>
+
+
+
+{/block:Audio}
+ 
+{block:Video}
+<div class="contain">
+
+<div class="box cap">
+
+<div class="pems">
+{block:ifshowviaicon}
+{block:rebloggedfrom}
+<a href="{ReblogParentURL}" title="via {ReblogParentName}"><img class="vias" src="{ReblogParentPortraitURL-64}"></a>
+{/block:rebloggedfrom}
+{/block:ifshowviaicon}
+
+{block:ifshowviaicon}
+{block:notreblog}
+<a href="{permalink}" title="by {name}"><img class="vias" src="{PortraitURL-64}"></a>
+{/block:notreblog}
+{/block:ifshowviaicon}
+
+{block:date}
+<div class="postinfo">
+<div class="date"><a href="{permalink}">{Month} {DayofMonth}{DayofMonthSuffix}, {Year}</a></div>
+{block:NoteCount}<div class="pnotes">{NoteCountwithLabel}</div>{/block:NoteCount}
+
+{block:ifshowcaptions}{block:ifsidecaptions}{block:indexpage}{block:Caption}
+<div class="captions">
+{block:NotReblog}{Caption}{/block:NotReblog}
+{block:RebloggedFrom}{block:Reblogs}
+<div style="margin-top:15px">
+    {block:HasPermalink}<a target="_blank" class="user" href="{Permalink}">{Username}</a>{/block:HasPermalink}
+    {block:HasNoPermalink}<span class="user">{Username}</span>{/block:HasNoPermalink}
+        <div style="margin-top:-10px">{Body}</div>
+        </div>
+{/block:Reblogs}{/block:RebloggedFrom}
+</div>
+{/block:Caption}{/block:indexpage}{/block:ifsidecaptions}{/block:ifshowcaptions}
+
+{block:permalinkpage}
+{block:ifsidecaptions}{block:Caption}
+<div class="captions">
+{block:NotReblog}{Caption}{/block:NotReblog}
+{block:RebloggedFrom}{block:Reblogs}
+<div style="margin-top:15px">
+    {block:HasPermalink}<a target="_blank" class="user" href="{Permalink}">{Username}</a>{/block:HasPermalink}
+    {block:HasNoPermalink}<span class="user">{Username}</span>{/block:HasNoPermalink}
+        <div style="margin-top:-10px">{Body}</div>
+        </div>
+{/block:Reblogs}{/block:RebloggedFrom}
+</div>
+{/block:Caption}{/block:ifsidecaptions}
+{/block:permalinkpage}
+
+<!---end of post info--->
+</div>
+{/block:date}
+
+<!---end of permalink--->
+</div>
+<!--end of perma--->
+</div>
+
+<div class="box posts">
+
+<div class="vc"><div class="w">{Video-500}</div></div>
+
+
+{block:ifshowcaptions}{block:ifnotsidecaptions}{block:indexpage}{block:Caption}
+<div class="captions">
+{block:NotReblog}{Caption}{/block:NotReblog}
+{block:RebloggedFrom}{block:Reblogs}
+<div style="margin-top:15px">
+    {block:HasPermalink}<a target="_blank" class="user" href="{Permalink}">{Username}</a>{/block:HasPermalink}
+    {block:HasNoPermalink}<span class="user">{Username}</span>{/block:HasNoPermalink}
+        <div style="margin-top:-10px">{Body}</div>
+        </div>
+{/block:Reblogs}{/block:RebloggedFrom}
+</div>
+{/block:Caption}{/block:indexpage}{/block:ifnotsidecaptions}{/block:ifshowcaptions}
+
+{block:permalinkpage}{block:ifnotsidecaptions}{block:Caption}
+<div class="captions">
+{block:NotReblog}{Caption}{/block:NotReblog}
+{block:RebloggedFrom}{block:Reblogs}
+<div style="margin-top:15px">
+    {block:HasPermalink}<a target="_blank" class="user" href="{Permalink}">{Username}</a>{/block:HasPermalink}
+    {block:HasNoPermalink}<span class="user">{Username}</span>{/block:HasNoPermalink}
+        <div style="margin-top:-10px">{Body}</div>
+        </div>
+{/block:Reblogs}{/block:RebloggedFrom}
+</div>
+{/block:Caption}{/block:ifnotsidecaptions}{/block:permalinkpage}
+
+{block:indexpage}
+{block:ifshowtags}
+{block:HasTags} <div class="tags">{block:Tags}<a href="{TagURL}">#{Tag} </a>{/block:Tags}</div>{/block:HasTags}{/block:ifshowtags}{/block:indexpage}
+
+{block:permalinkpage}{block:date}{block:HasTags}<div class="tags">{block:Tags}<a href="{TagURL}">#{Tag} </a>{/block:Tags}</div>{/block:HasTags} {/block:date}{/block:permalinkpage}
+
+<!---end of image box--->
+</div>
+
+<!---end of container---> 
+</div>
+
+
+
+{/block:Video}
+
+ 
+{block:PostNotes}
+<div class="postnotes">
+{block:RebloggedFrom}
+<div class="notesvia">reblogged from <a href="{ReblogParentURL}">{ReblogParentName}</a> <br>original post by <a href="{ReblogRootURL}">{ReblogRootName}</a>
+</div>
+{/block:RebloggedFrom}
+{PostNotes}
+</div>
+{/block:PostNotes}
+
+
+
+{/block:Posts}
+ 
+
+{block:Pagination}
+<article>
+<div id="pagination">
+{block:PreviousPage}<a href="{PreviousPage}" class="jump_page">&laquo;</a>{/block:PreviousPage}
+{block:JumpPagination length="5"}
+{block:CurrentPage}<span class="current_page">{PageNumber}</span>{/block:CurrentPage}
+{block:JumpPage}<a class="jump_page" href="{URL}">{PageNumber}</a>{/block:JumpPage}{/block:JumpPagination}
+{block:NextPage}<a href="{NextPage}" class="jump_page">&raquo;</a>{/block:NextPage}
+</div>
+</article>
+{/block:Pagination}
+   
+</div>
+
+
+<script src="https://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+ 
+<script>
+ 
+(function($){
+ 
+$(document).ready(function(){
+ 
+$("a[title]").style_my_tooltips({
+ 
+tip_follows_cursor:true,
+ 
+tip_delay_time:90,
+ 
+tip_fade_speed:600,
+ 
+attribute:"title"
+ 
+});
+ 
+});
+ 
+})(jQuery);
+ 
+</script>
+
+</body>
+ 
+ 
+</html>
+<span class="phc"><a href="https://nemurou.tumblr.com/">theme by<br><b>nemurou</b></a></span>
